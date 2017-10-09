@@ -1,18 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.uw.yw239.sunspotter.MainActivity">
 
+    <LinearLayout
+        android:id = "@+id/userInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom">
+
+        <EditText
+            android:id="@+id/txtLocation"
+            android:layout_weight = "1.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_content"
+            android:textAppearance="@style/CodeFont"
+            />
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_label"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/button_label"
+            android:textAppearance="@style/CodeFont"
+            />
+    </LinearLayout>
+
     <TextView
+        android:id="@+id/findResultTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="fill in the find result"
+        android:layout_below="@id/userInput"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:textSize="30sp"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/findResultTxt"
+        android:text="fill in the date and time"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textAppearance="@style/CodeFont"
+        />
+
+    <ImageView
+        android:id="@+id/findResultImg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/findResultTxt"
+        android:layout_toLeftOf="@id/findResultTxt"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_check_circle_black_24dp" />
+
+
+
+</RelativeLayout>
