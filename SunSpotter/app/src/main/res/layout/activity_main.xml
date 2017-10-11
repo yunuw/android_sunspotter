@@ -14,13 +14,13 @@
         android:layout_gravity="bottom">
 
         <EditText
-            android:id="@+id/txtLocation"
-            android:layout_weight = "1.5"
+            android:id="@+id/txtZipCode"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1.5"
             android:hint="@string/hint_content"
             android:textAppearance="@style/CodeFont"
-            />
+            android:inputType="number"/>
 
         <Button
             android:id="@+id/btnFind"
@@ -66,6 +66,12 @@
         android:scaleType="fitCenter"
         android:src="@drawable/ic_check_circle_black_24dp" />
 
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/findResultImg"
+        ></ListView>
 
 
 </RelativeLayout>
