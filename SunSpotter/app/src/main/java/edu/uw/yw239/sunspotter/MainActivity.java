@@ -138,8 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
                     public void onErrorResponse(VolleyError error) {
                         String errorMsg = new String(error.networkResponse.data);
-                        //// TODO: 10/12/17
-                        Toast.makeText(MainActivity.this.getApplicationContext(), errorMsg, Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this.getApplicationContext(), "City not found", Toast.LENGTH_LONG).show();
                     }
             });
         RequestSingleton.getInstance(this).add(request);

@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">SunSpotter</string>
     <string name="button_label">FIND SUN!</string>
-    <string name="hint_content">Enter a city...</string>
+    <string name="hint_content">Enter a city name...</string>
 </resources>
