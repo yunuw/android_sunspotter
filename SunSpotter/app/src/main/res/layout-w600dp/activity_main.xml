@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.uw.yw239.sunspotter.MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/userInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/txtZipCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:hint="@string/hint_content"
+            android:textAppearance="@style/CodeFont"
+            android:inputType="text"
+            android:gravity="bottom"
+            android:textAlignment="gravity"/>
+
+        <Button
+            android:id="@+id/btnFind"
+            android:layout_width="185dp"
+            android:layout_height="68dp"
+            android:text="@string/button_label"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:contentDescription="@string/button_label"
+            android:textAppearance="@style/CodeFont" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id = "@+id/search_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_toRightOf="@id/userInput">
+
+        <TextView
+            android:id="@+id/findResultTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:textSize="32dp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="5dp"
+            android:textAppearance="@style/CodeFont" />
+
+        </LinearLayout>
+
+    <ImageView
+        android:id="@+id/findResultImg"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="fitCenter"
+        android:layout_toRightOf="@id/search_output"
+        android:padding="8dp"
+        android:layout_alignBottom="@id/search_output"
+        android:layout_marginLeft="10dp" />
+
+    <GridView
+        android:id="@+id/rollerale_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="90dp"
+        android:numColumns="4"
+        android:verticalSpacing="10dp"
+        android:horizontalSpacing="10dp"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:layout_below="@id/userInput" />
+
+</RelativeLayout>
